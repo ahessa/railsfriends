@@ -23,7 +23,7 @@
   <br/>
 
   <div class="field form-group">
-    <%= form.text_field :email, class:"form-control", placeholder:"Email Name" %>
+    <%= form.text_field :email, class:"form-control", placeholder:"Email" %>
   </div>
 <br/>
   <div class="field form-group">
@@ -33,6 +33,12 @@
   <div class="field form-group">
     <%= form.text_field :twitter, class:"form-control", placeholder:"Twitter" %>
   </div>
+<br/>
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
+
+
 <br/>
   <div class="field form-group">
     <%= form.submit class:"btn btn-success" %>
